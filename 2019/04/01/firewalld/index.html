@@ -100,7 +100,7 @@
           <!-- Date -->
           <span class="date-time info">On
             <span class="date">2019-04-01</span>
-            <span class="time">23:11:53</span>
+            <span class="time">23:12:51</span>
           </span>
           
           <!--  Categories  -->
@@ -122,8 +122,9 @@
         
         <!-- Post Main Content -->
         <div class="post-content">
-          <h2 id="1-systemctl命令的基本使用"><a href="#1-systemctl命令的基本使用" class="headerlink" title="1.systemctl命令的基本使用"></a>1.systemctl命令的基本使用</h2><p><strong>systemctl是CentOS7的服务管理工具,它融合了service和chkconfig的功能于一体</strong><br>启动服务:         systemctl start firewalld<br>关闭服务:         systemctl stop firewalld<br>重启服务:         systemctl restart firewalld<br>查看服务状态:     systemctl status firewalld<br>开机自启动:         systemctl enable firewalld<br>开机禁止:         systemctl disable firewalld<br>查看是否开机自启动: systemctl is-enabled firewalld<br>查看已启动的服务列表: systemctl list-unit-files | grep enabled<br>查看启动失败的服务列表: systemctl –failed</p>
+          <h2 id="1-systemctl命令的基本使用"><a href="#1-systemctl命令的基本使用" class="headerlink" title="1.systemctl命令的基本使用"></a>1.systemctl命令的基本使用</h2><p><strong>systemctl是CentOS7的服务管理工具,它融合了service和chkconfig的功能于一体</strong><br>启动服务:         systemctl start firewalld<br>关闭服务:         systemctl stop firewalld<br>重启服务:         systemctl restart firewalld</p>
 <a id="more"></a>
+<p>查看服务状态:     systemctl status firewalld<br>开机自启动:         systemctl enable firewalld<br>开机禁止:         systemctl disable firewalld<br>查看是否开机自启动: systemctl is-enabled firewalld<br>查看已启动的服务列表: systemctl list-unit-files | grep enabled<br>查看启动失败的服务列表: systemctl –failed</p>
 <h2 id="2-firewalld命令的基本使用"><a href="#2-firewalld命令的基本使用" class="headerlink" title="2.firewalld命令的基本使用"></a>2.firewalld命令的基本使用</h2><p>查看版本: firewall-cmd –version<br>查看帮助: firewall-cmd –help<br>显示状态: firewall-cmd –state</p>
 <p>查看区域信息: firewall-cmd –get-active-zones<br>查看指定接口所属区域: firewall-cmd –get-zone-of-interface=eth0</p>
 <p>拒绝所有包:         firewall-cmd –panic-on<br>取消拒绝状态:     firewall-cmd –panic-off<br>查看是否拒绝:     firewall-cmd –query-panic</p>
