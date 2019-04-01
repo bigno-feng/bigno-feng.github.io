@@ -8,7 +8,7 @@
   <meta name="description" content>
   <meta name="author" content="Feng">
   <!-- Open Graph Data -->
-  <meta property="og:title" content="CentOS7中firewalld的基本使用">
+  <meta property="og:title" content="hello">
   <meta property="og:description" content>
   <meta property="og:site_name" content="冯海峰&#39;s blog">
   <meta property="og:type" content="article">
@@ -43,7 +43,7 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="page-title with-background-image">
-          <p class="title">CentOS7中firewalld的基本使用</p>
+          <p class="title">hello</p>
           <p class="subtitle"></p>
         </div>
         <div class="site-menu with-background-image">
@@ -107,38 +107,16 @@
           
           <!-- Date -->
           <span class="date-time info">On
-            <span class="date">2019-04-01</span>
+            <span class="date">2019-04-02</span>
             <span class="time">00:01:00</span>
           </span>
-          
-          <!--  Categories  -->
-            <span class="categories info">Under 
-
-<a href="/categories/linux/">linux</a>
-</span>
           
         </div>
         <!-- Tags -->
         
-          <div class="post-tags text-muted">
-            Tags: 
-
-<a class="tag" href="/tags/firewalld/">#firewalld</a> <a class="tag" href="/tags/linux/">#linux</a> <a class="tag" href="/tags/centos/">#centos</a>
-
-
-          </div>
-        
         <!-- Post Main Content -->
         <div class="post-content">
-          <h2 id="1-systemctl命令的基本使用"><a href="#1-systemctl命令的基本使用" class="headerlink" title="1.systemctl命令的基本使用"></a>1.systemctl命令的基本使用</h2><p><strong>systemctl是CentOS7的服务管理工具,它融合了service和chkconfig的功能于一体</strong><br>启动服务:         systemctl start firewalld<br>关闭服务:         systemctl stop firewalld<br>重启服务:         systemctl restart firewalld</p>
-<a id="more"></a>
-<p>查看服务状态:     systemctl status firewalld<br>开机自启动:         systemctl enable firewalld<br>开机禁止:         systemctl disable firewalld<br>查看是否开机自启动: systemctl is-enabled firewalld<br>查看已启动的服务列表: systemctl list-unit-files | grep enabled<br>查看启动失败的服务列表: systemctl –failed</p>
-<h2 id="2-firewalld命令的基本使用"><a href="#2-firewalld命令的基本使用" class="headerlink" title="2.firewalld命令的基本使用"></a>2.firewalld命令的基本使用</h2><p>查看版本: firewall-cmd –version<br>查看帮助: firewall-cmd –help<br>显示状态: firewall-cmd –state</p>
-<p>查看区域信息: firewall-cmd –get-active-zones<br>查看指定接口所属区域: firewall-cmd –get-zone-of-interface=eth0</p>
-<p>拒绝所有包:         firewall-cmd –panic-on<br>取消拒绝状态:     firewall-cmd –panic-off<br>查看是否拒绝:     firewall-cmd –query-panic</p>
-<h2 id="3-firewalld开启与关闭端口"><a href="#3-firewalld开启与关闭端口" class="headerlink" title="3.firewalld开启与关闭端口"></a>3.firewalld开启与关闭端口</h2><p>查看所有打开的端口: firewall-cmd –zone=public –list-ports<br>更新防火墙规则: firewall-cmd –reload            <strong><em>每次更改端口需要执行此命令</em></strong></p>
-<p> <strong><em>permanent参数，永久生效，没有此参数重启后失效</em></strong><br>添加端口: firewall-cmd –zone=public –add-port=8080/tcp –permanenet<br>删除端口: firewall-cmd –zone=public –remove-port=8080/tcp –permanent<br>查看端口: firewall-cmd –zone=public –query-port=8080/tcp</p>
-
+          
         </div>
       </div>
     </div>
