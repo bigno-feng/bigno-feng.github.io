@@ -100,8 +100,14 @@
           <!-- Date -->
           <span class="date-time info">On
             <span class="date">2019-04-01</span>
-            <span class="time">21:41:34</span>
+            <span class="time">21:44:55</span>
           </span>
+          
+          <!--  Categories  -->
+            <span class="categories info">Under 
+
+<a href="/categories/linux/">linux</a>
+</span>
           
         </div>
         <!-- Tags -->
@@ -120,8 +126,8 @@
 <p>##2.firewalld命令的基本使用<br>查看版本: firewall-cmd –version<br>查看帮助: firewall-cmd –help<br>显示状态: firewall-cmd –state</p>
 <p>查看区域信息: firewall-cmd –get-active-zones<br>查看指定接口所属区域: firewall-cmd –get-zone-of-interface=eth0</p>
 <p>拒绝所有包:         firewall-cmd –panic-on<br>取消拒绝状态:     firewall-cmd –panic-off<br>查看是否拒绝:     firewall-cmd –query-panic</p>
-<p>##3.firewalld开启与关闭端口<br>查看所有打开的端口: firewall-cmd –zone=public –list-ports<br>更新防火墙规则: firewall-cmd –reload            <em>每次更改端口需要执行此命令</em></p>
-<p>添加端口: firewall-cmd –zone=public –add-port=8080/tcp –permanenet  <em>permanent参数，永久生效，没有此参数重启后失效</em><br>删除端口: firewall-cmd –zone=public –remove-port=8080/tcp –permanent<br>查看端口: firewall-cmd –zone=public –query-port=8080/tcp</p>
+<p>##3.firewalld开启与关闭端口<br>查看所有打开的端口: firewall-cmd –zone=public –list-ports<br>更新防火墙规则: firewall-cmd –reload            <strong><em>每次更改端口需要执行此命令</em></strong></p>
+<p> <strong><em>permanent参数，永久生效，没有此参数重启后失效</em></strong><br>添加端口: firewall-cmd –zone=public –add-port=8080/tcp –permanenet<br>删除端口: firewall-cmd –zone=public –remove-port=8080/tcp –permanent<br>查看端口: firewall-cmd –zone=public –query-port=8080/tcp</p>
 
         </div>
       </div>
