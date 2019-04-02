@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[CentOS7中firewalld的基本使用]]></title>
+    <url>%2F2019%2F04%2F01%2Ffirewalld%2F</url>
+    <content type="text"><![CDATA[1.systemctl命令的基本使用systemctl是CentOS7的服务管理工具,它融合了service和chkconfig的功能于一体启动服务: systemctl start firewalld关闭服务: systemctl stop firewalld重启服务: systemctl restart firewalld查看服务状态: systemctl status firewalld开机自启动: systemctl enable firewalld开机禁止: systemctl disable firewalld查看是否开机自启动: systemctl is-enabled firewalld查看已启动的服务列表: systemctl list-unit-files | grep enabled查看启动失败的服务列表: systemctl –failed 2.firewalld命令的基本使用查看版本: firewall-cmd –version查看帮助: firewall-cmd –help显示状态: firewall-cmd –state 查看区域信息: firewall-cmd –get-active-zones查看指定接口所属区域: firewall-cmd –get-zone-of-interface=eth0 拒绝所有包: firewall-cmd –panic-on取消拒绝状态: firewall-cmd –panic-off查看是否拒绝: firewall-cmd –query-panic 3.firewalld开启与关闭端口查看所有打开的端口: firewall-cmd –zone=public –list-ports更新防火墙规则: firewall-cmd –reload 每次更改端口需要执行此命令 permanent参数，永久生效，没有此参数重启后失效添加端口: firewall-cmd –zone=public –add-port=8080/tcp –permanenet删除端口: firewall-cmd –zone=public –remove-port=8080/tcp –permanent查看端口: firewall-cmd –zone=public –query-port=8080/tcp]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>firewalld</tag>
+        <tag>linux</tag>
+        <tag>centos</tag>
+      </tags>
+  </entry>
+</search>
