@@ -1,14 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[markdown-代码块]]></title>
+    <title><![CDATA[Markdown-HTML标签]]></title>
+    <url>%2F2019%2F04%2F03%2Fmarkdown-10%2F</url>
+    <content type="text"><![CDATA[常用弥补Markdown的HTML标签1.字体与颜色12&lt;font face=&quot;微软雅黑&quot; color=&quot;red&quot; size=&quot;4&quot;&gt;字体及字体颜色和大小&lt;/font&gt;&lt;font color=&quot;#0000ff&quot;&gt;字体颜色&lt;/font&gt; 字体及字体颜色和大小字体颜色 2.换行1使用html标签 &lt;br&gt; 换行 3.文本对齐方式123&lt;p align=&quot;left&quot;&gt;居左文本&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;居中文本&lt;/p&gt;&lt;p align=&quot;right&quot;&gt;居右文本&lt;/p&gt; 居左文本居中文本居右文本 4.下划线1&lt;u&gt;下划线&lt;/u&gt; 下划线 5.任务列表1234- [ ] [links](), **formatting**, and ~~tags~~ supported- [x] list syntax required (any unordered or ordered list supported)- [ ] this is a complete item- [x] this is an incomplete item links, formatting, and tags supported list syntax required (any unordered or ordered list supported) this is a complete item this is an incomplete item]]></content>
+      <categories>
+        <category>markdown</category>
+      </categories>
+      <tags>
+        <tag>markdown</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Markdown-脚注|注解，注释]]></title>
+    <url>%2F2019%2F04%2F03%2Fmarkdown-9%2F</url>
+    <content type="text"><![CDATA[脚注|注解，注释1.脚注|注解12这是一个脚注的例子 [^1][^1]: 这里是脚注，我在文章最底下 这是一个脚注的例子 [^1][^1]: 这里是脚注，我在文章最底下 2.注释 注释是给自己看的，预览时也不会出现，当然发布出去别人也看不见 1&lt;!-- 注释 --&gt;]]></content>
+      <categories>
+        <category>markdown</category>
+      </categories>
+      <tags>
+        <tag>markdown</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Markdown-分割线]]></title>
+    <url>%2F2019%2F04%2F03%2Fmarkdown-8%2F</url>
+    <content type="text"><![CDATA[分割线1234***---___* * *]]></content>
+      <categories>
+        <category>markdown</category>
+      </categories>
+      <tags>
+        <tag>markdown</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Markdown-表格]]></title>
+    <url>%2F2019%2F04%2F03%2Fmarkdown-7%2F</url>
+    <content type="text"><![CDATA[表格 (Table) 表格对齐格式居左: :—居中: :—:居右: —: 123|标题|标题|标题||:---|:---:|---:||居左|居中|居右| 标题 标题 标题 居左 居中 居右]]></content>
+      <categories>
+        <category>markdown</category>
+      </categories>
+      <tags>
+        <tag>markdown</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Markdown-代码块]]></title>
     <url>%2F2019%2F04%2F03%2Fmarkdown-6%2F</url>
-    <content type="text"><![CDATA[代码块 (Code blocks) 代码分为行内代码和代码块 1.行内代码 行内代码使用 标识,可嵌入文字内 需要引用代码时，如果引用的语句只有一段，不分行，可以用 将语句包起来 1`Hello World` Hello World 2.代码块123``` key代码代码``` //加上对应的key，能使对于的代码高亮 java代码: 123public void hello() &#123; system.out.print("Hello World");&#125;]]></content>
+    <content type="text"><![CDATA[代码块 (Code blocks) 代码分为行内代码和代码块 1.行内代码 行内代码使用 标识,可嵌入文字内 需要引用代码时，如果引用的语句只有一段，不分行，可以用 将语句包起来 1`Hello World` Hello World 2.代码块123``` key代码代码``` //加上对应的key，能使对应的代码高亮 java代码: 123public void hello() &#123; system.out.print("Hello World");&#125; 语言与key对照表 language key Bash bash C++ cpp C# cs CSS css Erlang erlang Go go Gradle gradle Groovy groovy HTML html Java java JavaScript javascript Json json Lua lua Python python Ruby ruby SQL sql]]></content>
+      <categories>
+        <category>markdown</category>
+      </categories>
+      <tags>
+        <tag>markdown</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[Markdown-图片与链接]]></title>
     <url>%2F2019%2F04%2F03%2Fmarkdown-5%2F</url>
     <content type="text"><![CDATA[图片与链接 (Images &amp; Links) 图片与链接的语法很像， 区别在一个!上注: Markdown不能设置图片大小，如果必须设置则使用HTML标记 12345图片: ![]() ![图片描述，可忽略](链接地址)链接: []() [链接表述](链接地址)![黄狗头](http://image.bignof.com/狗头.jpg)[黄狗头](http://image.bignof.com/狗头.jpg) 黄狗头]]></content>
+      <categories>
+        <category>markdown</category>
+      </categories>
+      <tags>
+        <tag>markdown</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[Markdown-文字样式]]></title>
