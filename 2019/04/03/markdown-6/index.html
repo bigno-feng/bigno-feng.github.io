@@ -103,18 +103,17 @@
 
 
 
-  <meta name="description" content="方法有一下三种1.修改server端的etc/ssh/sshd_config1ClientAliveInterval 60 server每隔60秒发送一次请求给client，然后client响应，从而保持连接 1ClientALiveCountMax 3 server发出请求后，客户端没有响应得次数达到3，就自动断开连接，正常情况下，client不会不响应 1systemctl reload ss">
-<meta name="keywords" content="linux,ssh,sshd">
+  <meta name="description" content="代码块 (Code blocks) 代码分为行内代码和代码块  1.行内代码 行内代码使用 标识,可嵌入文字内 需要引用代码时，如果引用的语句只有一段，不分行，可以用 将语句包起来  1`Hello World` Hello World 2.代码块123``` key代码代码``` //加上对应的key，能使对于的代码高亮 java代码: 123public void hello() &amp;#123;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ssh保持长连接的方式">
-<meta property="og:url" content="http://bignof.com/2019/04/02/ssh/index.html">
+<meta property="og:title" content="markdown-代码块">
+<meta property="og:url" content="http://bignof.com/2019/04/03/markdown-6/index.html">
 <meta property="og:site_name" content="Feng&#39;s blog">
-<meta property="og:description" content="方法有一下三种1.修改server端的etc/ssh/sshd_config1ClientAliveInterval 60 server每隔60秒发送一次请求给client，然后client响应，从而保持连接 1ClientALiveCountMax 3 server发出请求后，客户端没有响应得次数达到3，就自动断开连接，正常情况下，client不会不响应 1systemctl reload ss">
+<meta property="og:description" content="代码块 (Code blocks) 代码分为行内代码和代码块  1.行内代码 行内代码使用 标识,可嵌入文字内 需要引用代码时，如果引用的语句只有一段，不分行，可以用 将语句包起来  1`Hello World` Hello World 2.代码块123``` key代码代码``` //加上对应的key，能使对于的代码高亮 java代码: 123public void hello() &amp;#123;">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-02T14:36:10.363Z">
+<meta property="og:updated_time" content="2019-04-03T09:35:11.375Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ssh保持长连接的方式">
-<meta name="twitter:description" content="方法有一下三种1.修改server端的etc/ssh/sshd_config1ClientAliveInterval 60 server每隔60秒发送一次请求给client，然后client响应，从而保持连接 1ClientALiveCountMax 3 server发出请求后，客户端没有响应得次数达到3，就自动断开连接，正常情况下，client不会不响应 1systemctl reload ss">
+<meta name="twitter:title" content="markdown-代码块">
+<meta name="twitter:description" content="代码块 (Code blocks) 代码分为行内代码和代码块  1.行内代码 行内代码使用 标识,可嵌入文字内 需要引用代码时，如果引用的语句只有一段，不分行，可以用 将语句包起来  1`Hello World` Hello World 2.代码块123``` key代码代码``` //加上对应的key，能使对于的代码高亮 java代码: 123public void hello() &amp;#123;">
 
 
 
@@ -122,7 +121,7 @@
 
   
   
-  <link rel="canonical" href="http://bignof.com/2019/04/02/ssh/">
+  <link rel="canonical" href="http://bignof.com/2019/04/03/markdown-6/">
 
 
 
@@ -132,7 +131,7 @@
   };
 </script>
 
-  <title>ssh保持长连接的方式 | Feng's blog</title>
+  <title>markdown-代码块 | Feng's blog</title>
   
 
 
@@ -384,7 +383,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://bignof.com/2019/04/02/ssh/">
+    <link itemprop="mainEntityOfPage" href="http://bignof.com/2019/04/03/markdown-6/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="冯海峰">
@@ -401,7 +400,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">ssh保持长连接的方式
+          <h1 class="post-title" itemprop="name headline">markdown-代码块
 
               
             
@@ -427,7 +426,7 @@
                 
               
 
-              <time title="创建时间：2019-04-02 17:10:42 / 修改时间：22:36:10" itemprop="dateCreated datePublished" datetime="2019-04-02T17:10:42+08:00">2019-04-02</time>
+              <time title="创建时间：2019-04-03 17:22:42 / 修改时间：17:35:11" itemprop="dateCreated datePublished" datetime="2019-04-03T17:22:42+08:00">2019-04-03</time>
             
 
             
@@ -437,24 +436,6 @@
             
           </span>
 
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/linux/" itemprop="url" rel="index"><span itemprop="name">linux</span></a></span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -469,8 +450,8 @@
             
               
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/2019/04/02/ssh/#SOHUCS" itemprop="discussionUrl">
-                  <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="2019/04/02/ssh/" itemprop="commentCount"></span>
+                <a href="/2019/04/03/markdown-6/#SOHUCS" itemprop="discussionUrl">
+                  <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="2019/04/03/markdown-6/" itemprop="commentCount"></span>
                 </a>
               
             
@@ -505,16 +486,18 @@
       
 
       
-        <h1 id="方法有一下三种"><a href="#方法有一下三种" class="headerlink" title="方法有一下三种"></a>方法有一下三种</h1><h2 id="1-修改server端的etc-ssh-sshd-config"><a href="#1-修改server端的etc-ssh-sshd-config" class="headerlink" title="1.修改server端的etc/ssh/sshd_config"></a>1.修改server端的etc/ssh/sshd_config</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ClientAliveInterval 60</span><br></pre></td></tr></table></figure>
-<p>server每隔60秒发送一次请求给client，然后client响应，从而保持连接</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ClientALiveCountMax 3</span><br></pre></td></tr></table></figure>
-<p>server发出请求后，客户端没有响应得次数达到3，就自动断开连接，正常情况下，client不会不响应</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl reload sshd</span><br></pre></td></tr></table></figure>
-<h2 id="2-修改client端的etc-ssh-ssh-config添加以下：（在没有权限改server配置的情形下）"><a href="#2-修改client端的etc-ssh-ssh-config添加以下：（在没有权限改server配置的情形下）" class="headerlink" title="2.修改client端的etc/ssh/ssh_config添加以下：（在没有权限改server配置的情形下）"></a>2.修改client端的etc/ssh/ssh_config添加以下：（在没有权限改server配置的情形下）</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ServerAliveInterval 60</span><br></pre></td></tr></table></figure>
-<p>client每隔60秒发送一次请求给server，然后server响应，从而保持连接</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ServerAliveCountMax 3</span><br></pre></td></tr></table></figure>
-<p>client发出请求后，服务器端没有响应得次数达到3，就自动断开连接，正常情况下，server不会不响应</p>
-<h2 id="3-ssh连接时"><a href="#3-ssh连接时" class="headerlink" title="3.ssh连接时"></a>3.ssh连接时</h2><p>在命令参数里 <code>ssh -o ServerAliveInterval=60</code> 这样子只会在需要的连接中保持持久连接， 毕竟不是所有连接都要保持持久的</p>
+        <h2 id="代码块-Code-blocks"><a href="#代码块-Code-blocks" class="headerlink" title="代码块 (Code blocks)"></a>代码块 (Code blocks)</h2><blockquote>
+<p>代码分为行内代码和代码块</p>
+</blockquote>
+<h4 id="1-行内代码"><a href="#1-行内代码" class="headerlink" title="1.行内代码"></a>1.行内代码</h4><blockquote>
+<p>行内代码使用 <code>标识,可嵌入文字内
+需要引用代码时，如果引用的语句只有一段，不分行，可以用</code> 将语句包起来</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">`Hello World`</span><br></pre></td></tr></table></figure>
+<p><code>Hello World</code></p>
+<h4 id="2-代码块"><a href="#2-代码块" class="headerlink" title="2.代码块"></a>2.代码块</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">``` key</span><br><span class="line">代码代码</span><br><span class="line">``` //加上对应的key，能使对于的代码高亮</span><br></pre></td></tr></table></figure>
+<p>java代码:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">hello</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	system.out.print(<span class="string">"Hello World"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -536,16 +519,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/linux/" rel="tag"> <i class="fa fa-tag"></i> linux</a>
-          
-            <a href="/tags/ssh/" rel="tag"> <i class="fa fa-tag"></i> ssh</a>
-          
-            <a href="/tags/sshd/" rel="tag"> <i class="fa fa-tag"></i> sshd</a>
-          
-        </div>
-      
 
       
       
@@ -555,8 +528,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/04/01/firewalld/" rel="next" title="CentOS7中firewalld的基本使用">
-                <i class="fa fa-chevron-left"></i> CentOS7中firewalld的基本使用
+              <a href="/2019/04/03/markdown-5/" rel="next" title="Markdown-图片与链接">
+                <i class="fa fa-chevron-left"></i> Markdown-图片与链接
               </a>
             
           </div>
@@ -564,10 +537,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/04/02/markdown/" rel="prev" title="Markdown-标题">
-                Markdown-标题 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -757,7 +726,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#方法有一下三种"><span class="nav-number">1.</span> <span class="nav-text">方法有一下三种</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-修改server端的etc-ssh-sshd-config"><span class="nav-number">1.1.</span> <span class="nav-text">1.修改server端的etc/ssh/sshd_config</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-修改client端的etc-ssh-ssh-config添加以下：（在没有权限改server配置的情形下）"><span class="nav-number">1.2.</span> <span class="nav-text">2.修改client端的etc/ssh/ssh_config添加以下：（在没有权限改server配置的情形下）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-ssh连接时"><span class="nav-number">1.3.</span> <span class="nav-text">3.ssh连接时</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#代码块-Code-blocks"><span class="nav-number">1.</span> <span class="nav-text">代码块 (Code blocks)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-行内代码"><span class="nav-number">1.0.1.</span> <span class="nav-text">1.行内代码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-代码块"><span class="nav-number">1.0.2.</span> <span class="nav-text">2.代码块</span></a></li></ol></li></ol></div>
             
 
           </div>

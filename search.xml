@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[markdown-文字样式]]></title>
+    <title><![CDATA[markdown-代码块]]></title>
+    <url>%2F2019%2F04%2F03%2Fmarkdown-6%2F</url>
+    <content type="text"><![CDATA[代码块 (Code blocks) 代码分为行内代码和代码块 1.行内代码 行内代码使用 标识,可嵌入文字内 需要引用代码时，如果引用的语句只有一段，不分行，可以用 将语句包起来 1`Hello World` Hello World 2.代码块123``` key代码代码``` //加上对应的key，能使对于的代码高亮 java代码: 123public void hello() &#123; system.out.print("Hello World");&#125;]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[Markdown-图片与链接]]></title>
+    <url>%2F2019%2F04%2F03%2Fmarkdown-5%2F</url>
+    <content type="text"><![CDATA[图片与链接 (Images &amp; Links) 图片与链接的语法很像， 区别在一个!上注: Markdown不能设置图片大小，如果必须设置则使用HTML标记 12345图片: ![]() ![图片描述，可忽略](链接地址)链接: []() [链接表述](链接地址)![黄狗头](http://image.bignof.com/狗头.jpg)[黄狗头](http://image.bignof.com/狗头.jpg) 黄狗头]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[Markdown-文字样式]]></title>
     <url>%2F2019%2F04%2F02%2Fmarkdown-4%2F</url>
     <content type="text"><![CDATA[文字样式 (Text Styling)1.基本语法12345**加粗文本** 或者 __加粗文本__ 两个下划线*斜体文本* 或者 _斜体文本_***斜粗体*** 或者 ___斜粗体___~~删除文本~~`底纹` 加粗文本 或者 加粗文本 两个下划线斜体文本 或者 斜体文本斜粗体 或者 斜粗体删除文本底纹 2.非基本语法12这是&lt;sup&gt;上标文字&lt;/sup&gt;这是&lt;sub&gt;下标文字&lt;/sub&gt; 这是上标文字这是下标文字]]></content>
       <categories>
@@ -12,7 +22,7 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[markdown-列表]]></title>
+    <title><![CDATA[Markdown-列表]]></title>
     <url>%2F2019%2F04%2F02%2Fmarkdown-3%2F</url>
     <content type="text"><![CDATA[列表 (Lists) markdown支持有序列表和无序列表 1.有序列表 (Ordered Lists) 有序列表使用数字加英文句点.来表示:12345671.Red2.Green3.Bluea.Redb.Greenc.Blue 1.Red2.Green3.Blue a.Redb.Greenc.Blue 2.无序列表 (Unordered Lists) 无序列表使用 - , + 和 * 作为列表标记: 123- Red- Green- Blue Red Green Blue 12345678- Red //多级列表 - Red-1 //次级列表在前面多打2个以上空格 * Red-11 * Red-22 - Red-2 - Red-3- Green- Blue Red Red-1 Red-11 Red-22 Red-2 Red-3 Green Blue]]></content>
       <categories>
@@ -23,7 +33,7 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[markdown-引用]]></title>
+    <title><![CDATA[Markdown-引用]]></title>
     <url>%2F2019%2F04%2F02%2Fmarkdown-2%2F</url>
     <content type="text"><![CDATA[引用（Reference) 很好用的功能 引用以&gt;来表示，引用中支持多级引用、标题、列表、代码块、分割线等常规语法 1.常见的引用语法123&gt; 这是一段引用 //在&apos;&gt;&apos;后面有1个空格&gt;&gt; 这是引用的代码块 //在&apos;&gt;&apos;后面有5个空格 这是一段引用 这是引用的代码块 12345&gt; 代码例子:&gt; public void test() &#123; system.out.print(&quot;Hello World&quot;); &#125; 代码例子: public void test() { system.out.print(&quot;Hello World&quot;); } 2.分级引用123&gt; 一级引用&gt; &gt; 二级引用&gt; &gt; &gt; 三级引用 一级引用 二级引用 三级引用 123&gt; #### 这是一个四级标题 //引用中可以使用各种语法&gt; - 无序列表1&gt; - 无序列表2 这是一个四级标题 无序列表1 无序列表2]]></content>
       <categories>
@@ -34,7 +44,7 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[markdown-标题]]></title>
+    <title><![CDATA[Markdown-标题]]></title>
     <url>%2F2019%2F04%2F02%2Fmarkdown%2F</url>
     <content type="text"><![CDATA[标题 (Headers) markdown支持六级标题 123456# 一级标题## 二级标题### 三级标题#### 四级标题##### 五级标题###### 六级标题 一级标题二级标题三级标题四级标题五级标题六级标题]]></content>
       <categories>
