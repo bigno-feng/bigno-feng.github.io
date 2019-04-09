@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[ssh隧道技术]]></title>
+    <url>%2F2019%2F04%2F08%2Fssh%E9%9A%A7%E9%81%93%2F</url>
+    <content type="text"><![CDATA[ssh隧道技术(别名: ssh端口转发)分为以下三种 本地端口转发 (Local) 远程端口转发 (Remote) 动态端口转发 (Dynamic) 本地端口转发 先准备好应用环境: Server A Server B Client A S_A上有mysql，S_B可以访问S_A, C_A可以访问S_B,现在我们要C_A访问S_A上的msyql服务 现在我们需要在ServerA和ServerB之间建立一条ssh隧道，让ClientA可以通过ServerB访问ServerA的mysql服务 运行如下命令:ssh -L 9906:ServerA_IP:3006 root@ServerA_IP这样就实现了访问ServerB的9906端口等于访问了ServerA的3306端口 不过这样只会监听本地回环的9906端口,也就是说只能在ServerB本地来访问这个端口 如果要从ClientA访问ServerB的9906端口，需要把9906端口对外开放，有两种方案: ssh -g -L 9906:ServerA_IP:3306 root@ServerA_IP ssh -L 0.0.0.0:9906:ServerA_IP:3306 root@ServerA_IP 而在实际使用过程中，我们往往会建立隧道后，退出当前ssh会话，所以，上述命令并不能满足我们的需求，因为，一旦退出ssh会话，隧道也随之关闭，这时候我们来加上 -N 和 -f 参数，来使ssh隧道后台运行ssh -Nf -L 0.0.0.0:9906:ServerA_IP:3306 root@Serer_IP 远程端口转发(内网穿透技术,很实用) 同样准备好环境:箭头表示允许访问的方向，也就是说 ServerC可以访问ServerB,ServerA和ClientA ClientB和ClientC可以访问ClientA 第一个小目标ClientB访问ServerC的22端口实现步骤：1.ClientA需要修改一下sshd_config,开启GatewayPorts,这样才能监听回环地址以外的地址123vim /etc/ssh/sshd_config增加 GatewayPorts yessystemctl reload sshd 2.ServerC和ClientA建立ssh隧道，让ClientA在0.0.0.0上监听9080端口，使访问这个端口的数据转发到ServerC的22端口上12//在ServerC上运行如下命令ssh -R 0.0.0.0:9080:localhost:22 root@CA_IP 3.通过ClintA的9080端口来登录ServerCssh root@CA_IP -p 9080 第二个小目标ClientB访问ServerA很简单，因为ServerC可以直接访问ServerA和ClientA,所以通过ServerC把ServerA的22端口转发到ClientA的9080端口就可以12//还是在ServerC上运行ssh -R 0.0.0.0:9080:SA_IP:22 root@CA_IP 第三个小目标ServerA访问ClientC这就需要经过多层ssh隧道才能实现1.ClientA需要改ssh_config，使端口能被外网访问2.ClientC把自己的22端口反向转发到ClientA,使外网通过ClientA的9999端口可以访问ClientC的22端口12//ClientC上运行ssh -R 0.0.0.0:9999:CC_IP:22 root@CC_IP 3.因为ServerC可以访问ClientA和ServerA，所以通过ServerC把ClientA的9999端口转发到ServerA的8080端口12//ServerC上运行ssh -R 0.0.0.0:8080:CA_IP:9999 root@SA_IP 4.现在可以在serverA本地通过8080端口访问ClientC的22端口了1ssh root@127.0.0.1 -p 8080 应用场景1.客户要把项目部署在外网测试，可是外网服务器因为内存不足之类的原因，无法再部署项目，这时候就可以把项目部署在自己的电脑上，然后通过远程转发，把自己的端口转发到外网端口上，客户就可以通过外网端口来访问项目了，而且项目也部署在自己电脑上 2.在家里想要访问公司内网服务器，就可以在内网服务器把22端口转发到外网服务器上，然后在家里就可以爽歪歪的连接公司内网服务器了 动态转发1ssh -fN -D 8888 root@Server_IP 通过Server的8888端口代理上网(科学上网,翻墙),不做过多讲解]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+        <tag>ssh</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Markdown-HTML标签]]></title>
     <url>%2F2019%2F04%2F03%2Fmarkdown-10%2F</url>
     <content type="text"><![CDATA[常用弥补Markdown的HTML标签1.字体与颜色12&lt;font face=&quot;微软雅黑&quot; color=&quot;red&quot; size=&quot;4&quot;&gt;字体及字体颜色和大小&lt;/font&gt;&lt;font color=&quot;#0000ff&quot;&gt;字体颜色&lt;/font&gt; 字体及字体颜色和大小字体颜色 2.换行1使用html标签 &lt;br&gt; 换行 3.文本对齐方式123&lt;p align=&quot;left&quot;&gt;居左文本&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;居中文本&lt;/p&gt;&lt;p align=&quot;right&quot;&gt;居右文本&lt;/p&gt; 居左文本居中文本居右文本 4.下划线1&lt;u&gt;下划线&lt;/u&gt; 下划线 5.任务列表1234- [ ] [links](), **formatting**, and ~~tags~~ supported- [x] list syntax required (any unordered or ordered list supported)- [ ] this is a complete item- [x] this is an incomplete item links, formatting, and tags supported list syntax required (any unordered or ordered list supported) this is a complete item this is an incomplete item]]></content>
